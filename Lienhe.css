@@ -1,0 +1,458 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* cuộn mượt mà */
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-image: url(image/sinhvien1-removebg-preview.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 600px rgb(81, 81, 156);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.navbar {
+    position: absolute;
+    margin-top: 0px;
+    padding: 0px;
+    background-color: rgb(226, 220, 214);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgb(50, 5, 5);
+    z-index: 9999;
+    animation: nav 1s 1 forwards;
+    /* forwards nó sẻ dừng tại vị trí "to" chứ k quay về  */
+}
+
+@keyframes nav {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+}
+
+.navbaran {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbaran {
+        position: absolute;
+        display: flex;
+        justify-items: start;
+        left: 15px;
+        top: 10px;
+    }
+
+    .navbaran #nav-childan {
+        list-style-type: none;
+        position: relative;
+        transition: 0.5s;
+        padding: 30px;
+    }
+
+    .navbaran #nav-childan:hover {
+        color: orangered;
+    }
+
+    .navbaran #nav-childan .nav-childan {
+        display: none;
+        position: absolute;
+        list-style-type: none;
+        padding: 10px 20px;
+        background-color: rgba(25, 27, 19, 0.244);
+
+    }
+
+    .navbaran #nav-childan .nav-childan #lienhean {
+        background-color: #26b1b8;
+    }
+
+    .navbaran #nav-childan .nav-childan a {
+        display: flex;
+        text-decoration: none;
+        padding: 10px 40px;
+        color: rgb(36, 33, 33);
+        transition: 0.3s;
+    }
+
+    .navbaran #nav-childan .nav-childan a:hover {
+        background-color: #26b1b8;
+    }
+
+    .navbaran #nav-childan:hover>ul.nav-childan {
+        display: block;
+    }
+}
+
+.logo a img {
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 0 0px;
+    height: 80px;
+}
+
+.navbar .nav-child {
+    padding: 0 150px;
+    display: flex;
+}
+
+.navbar .nav-child li {
+    display: inline-block;
+    list-style-type: none;
+    /* padding: 0;
+    margin: 0; */
+
+}
+
+.navbar .nav-child li a {
+    text-decoration: none;
+    padding: 31px 20px;
+    font-weight: bold;
+    color: rgb(156, 72, 69);
+    transition: 0.5s;
+    border-bottom: 3px solid rgba(32, 29, 29, 0);
+}
+
+.navbar .nav-child li a:hover {
+    color: black;
+    background-color: #ceda26;
+    box-shadow: inset 0 0px 30px rgb(101, 96, 32);
+}
+
+#formdndk a {
+    text-decoration: none;
+    padding: 31px 20px;
+    font-weight: bold;
+    color: rgb(143, 39, 39);
+    transition: 0.5s;
+}
+
+#formdndk a:hover {
+    color: rgb(11, 139, 243);
+}
+
+#lienhe a {
+    background-color: #ceda26;
+    box-shadow: inset 0 0 30px rgb(101, 96, 32);
+    color: black;
+}
+
+.search {
+    position: absolute;
+    top: 200px;
+    padding: 20px;
+    display: flex;
+    animation: search 2s 1 forwards;
+}
+
+@keyframes search {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+.search input {
+    width: 400px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: larger;
+    border: 2px solid black;
+}
+
+.search button {
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: larger;
+    border: 2px solid black;
+    z-index: 10;
+    margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    .search form {
+        display: none;
+    }
+}
+
+.web .messenger {
+    position: fixed;
+    right: 20px;
+    top: 180px;
+}
+
+.web .messenger a {
+    font-size: 40px;
+    color: rgb(69, 69, 181);
+    transition: 0.3s;
+}
+
+.web .messenger a:hover {
+    /* font-size: 50px; */
+    transform: scale(1.1);
+    color: blue;
+}
+
+
+marquee {
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+    color: rgb(118, 165, 42);
+    margin: 0;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(215, 215, 233);
+}
+
+.container {
+    padding: 60px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .contact {
+    padding: 0px 0;
+    display: grid;
+    grid-template-columns: 650px 650px;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+
+.container .contact h2 {
+
+    padding: 30px 0;
+}
+
+.container .contact .info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.container .contact .info-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 17px;
+    column-gap: 20px;
+}
+
+.contact .info-inner {
+    text-decoration: none;
+}
+
+.container .contact-info h2,.info-inner {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+}
+.contact .info-inner i{
+    font-size: large;
+    color: rgb(92, 184, 67);
+    margin-right: 10px;
+}
+ .contact-info .box-icon{
+    padding: 30px 0;
+    font-size: 27px;
+    
+}
+ .contact-info .box-icon a{
+    transition: 0.3s;
+    color: rgb(95, 109, 141);
+    margin-right: 10px;
+}
+ .contact-info .box-icon a:hover{
+    color: rgb(60, 60, 217);
+}
+
+ .contact-info .info-inner a{
+    text-decoration: none;
+    color: black;
+}
+.container .form-comment .form-inner{
+display: flex;
+flex-direction: column;
+}
+.form-comment .form-inner .box-input-top{
+display: flex;
+flex:1;
+}
+.form-comment .form-inner .box-input-center{
+    display: flex;
+    flex:1;
+}
+.form-comment .form-inner .box-input-bottom{
+    display: flex;
+    flex:1;
+}
+.form-comment .form-inner .box-note-bottom{
+    margin: 6px ;
+    font-weight: bold
+}
+.box-note-bottom textarea{
+    padding: 12px 0px 0px 10px;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.form-inner input{
+    padding: 12px 120px 12px 10px;
+    margin:6px ;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+}
+.form-inner textarea:focus,input:focus{
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    box-shadow: 0 0 7px rgb(255, 196, 47);
+}
+
+.form-comment .form-inner .button{
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+}
+.form-comment .form-inner button{
+    padding: 13px 130px;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(183, 224, 108);
+    box-shadow: inset 0 0 30px rgb(28, 188, 140);
+    border: none;
+    transition: 0.3s;
+}
+.form-comment .form-inner button:hover{
+    background-color: rgb(137, 225, 28);
+    box-shadow: inset 0 0 30px rgb(210, 106, 118);
+}
+
+.web .arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 9999;
+    transition: 1s;
+}
+
+.web .arrow:hover {
+    transform: rotate(360deg);
+}
+
+.web .arrow a {
+    font-size: 15px;
+    color: rgb(86, 80, 80);
+    transition: 0.3s;
+    padding: 9px 12px 9px 12px;
+    background-color: #edeed900;
+    border-radius: 50px;
+    border: 2px solid rgb(86, 80, 80);
+}
+
+.web .arrow a:hover {
+    /* font-size: 50px; */
+    transform: scale(1.1);
+    background-color: rgb(126, 207, 28);
+
+}
+
+
+footer {
+    background-image: url(image/footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    padding-top: 100px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+footer .footernav {
+    width: calc(25%-30px);
+    padding: 10px;
+}
+
+footer h3 {
+    color: #57dfe7;
+}
+
+footer .footernav .text {
+    width: 300px;
+    color: rgb(177, 197, 215);
+}
+
+footer .footernav .text1 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+footer .footernav .text1 a:hover {
+    color: blue;
+}
+
+footer li {
+    list-style-type: none;
+    color: rgb(177, 197, 215);
+    padding-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(177, 197, 215);
+    transition: 0.5s;
+    padding: 5px;
+}
+
+footer a:hover {
+    color: red;
+}
+
+footer .footernav .content {
+    margin-top: 20px;
+}
+
+footer .footernav .news {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+footer .footernav .news img {
+    width: 100px;
+    padding-right: 10px;
+}
+
+.banquyen {
+    background-color: rgb(64, 55, 55);
+    text-align: center;
+    padding: 15px;
+    color: aqua;
+}
