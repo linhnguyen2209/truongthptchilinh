@@ -9,13 +9,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Form.css">
-    <!-- <style> không có  ;
-        fieldset{width: 400px;}
-        .line{ display: flex; margin-bottom: 10px;}
-        label{ width: 130px;}
-        .btn{background-color: green; border: none; padding: 15px 25px;
-        color: #fff;border-radius: 8px;margin-right: 20px;}
-    </style> -->
 </head>
 
 <body>
@@ -24,7 +17,7 @@
             <ul class="navbaran">
                 <li id="nav-childan"><i class="fa-solid fa-bars"></i>
                     <ul class="nav-childan">
-                        <li id="trangchuan"><a href="Trangchu.html">TRANG CHỦ</a></li>
+                        <li id="trangchuan"><a href="index.html">TRANG CHỦ</a></li>
                         <li id="gioithieuan"><a href="Gioithieu.html">GIỚI THIỆU</a></li>
                         <li id="chuyennganhan"><a href="Chuyennganh.html">GIÁO DỤC</a></li>
                         <li id="tintucan"><a href="Tintuc.html">TIN TỨC</a></li>
@@ -36,10 +29,10 @@
             <!-- <img class="img" src="image/" alt=""> -->
             <div class="navbar">
                 <div class="logo">
-                    <a href="Trangchu.html"><img src="image/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="image/logo.png" alt="logo"></a>
                 </div>
                 <ul class="nav-child">
-                    <li id="trangchu"><a href="Trangchu.html">TRANG CHỦ</a></li>
+                    <li id="trangchu"><a href="index.html">TRANG CHỦ</a></li>
                     <li id="gioithieu"><a href="Gioithieu.html">GIỚI THIỆU</a></li>
                     <li id="chuyennganh"><a href="Chuyennganh.html">GIÁO DỤC</a></li>
                     <li id="tintuc"><a href="Tintuc.html">TIN TỨC</a></li>
@@ -47,161 +40,79 @@
                 </ul>
                 <div id="formdndk"><a href="Form.html">LOGIN | SIGN UP</a></div>
             </div>
+
+            <div class="form-login-sign-up">
+                <input type="radio" name="inputform" id="login" class="radio-box" >
+                <input type="radio" name="inputform" id="sign-up" class="radio-box" checked>
+
+                <div class="container-inner" id="dk">
+                    <div class="form-sign-up">
+                        <div class="icon-close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="form-box">
+                            <h2>Sign up</h2>
+                            <form action="#">
+                                <div class="input-box ">
+                                    <span class="icon"><i class="fa-solid fa-user"></i></i></span>
+                                    <input type="text" required>
+                                    <label for="">Username</label>
+                                </div>
+                                <div class="input-box ">
+                                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <input type="email" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-box ">
+                                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                                    <input type="password" required>
+                                    <label for="">Password</label>
+                                </div>
+
+                                <div class="remember-forgot">
+                                    <label for=""><input type="checkbox">I agree to the terms & conditions</label>
+                                </div>
+                                <button type="submit" class="btn">Sign up</button>
+                                <div class="login-sign-up">
+                                    <p>Already have an account? <label class="sign-up-link" for="sign-up">Login</label>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-inner" id="dn">
+                    <div class="form">
+                        <div class="icon-close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="form-box ">
+                            <h2>Login</h2>
+                            <form action="#">
+                                <div class="input-box ">
+                                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <input type="email" required>
+                                    <label for="">Email</label>
+                                </div>
+                                <div class="input-box ">
+                                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                                    <input type="password" required>
+                                    <label for="">Password</label>
+                                </div>
+
+                                <div class="remember-forgot">
+                                    <label for=""><input type="checkbox">Remember me</label>
+                                    <a href="">Forgot password?</a>
+                                </div>
+                                <button type="submit" class="btn">Login</button>
+                                <div class="login-sign-up">
+                                    <p>Don't have an account? <label class="sign-up-link" for="login">Sign up</label>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </header>
-
-
-
-        <div class="container">
-           
-
-            <div class="title">
-                <h1>MỜI BẠN NHẬP THÔNG TIN</h1>
-            </div>
-            <div class="form">
-                <div class="formdk">
-                    <fieldset>
-                        <legend>Form Đăng ký</legend>
-                        <form action="https://www.google.com/" method="get">
-                            <div class="line">
-                                <label>Tên *: </label>
-                                <input type="text" required placeholder="Điền đầy đủ họ tên">
-                            </div>
-                            <div class="line">
-                                <label>Email *: </label>
-                                <input type="email" required>
-                                <!-- required bắt buộc nhập -->
-                            </div>
-                            <div class="line">
-                                <label>Mật khẩu: </label>
-                                <input type="password">
-                            </div>
-                            <div class="line">
-                                <label>Nhập lại mật khẩu: </label>
-                                <input type="password">
-                            </div>
-                            <div class="line">
-                                <label>Giới tính: </label>
-                                <input type="radio" name="gender"> Nam
-                                <input type="radio" name="gender"> Nữ
-                                <input type="radio" name="gender"> Khác
-                            </div>
-                            <div class="line">
-                                <label>Ngày sinh: </label>
-                                <input type="date">
-                            </div>
-                            <div class="line">
-                                <label>Quốc tịch</label>
-                                <select>
-                                    <option>Việt Nam</option>
-                                    <option>Trung Quốc</option>
-                                    <option>Campuchia</option>
-                                    <option>Lào</option>
-                                </select>
-                            </div>
-                            <div class="line">
-                                <label>Ghi chú: </label>
-                                <textarea></textarea>
-                            </div>
-                            <div class="line">
-                                <label>&nbsp;</label>
-                                <input type="submit" value="Đăng ký" class="btn">
-                                <input type="reset" value="Nhập lại" class="btn">
-                            </div>
-                        </form>
-                    </fieldset>
-                </div>
-                <div class="formdn">
-                    <fieldset>
-                        <legend>Form đăng nhập</legend>
-                        <form action="">
-                            <label for="">User Name:</label> <br>
-                            <input type="text"> <br>
-                            <label for="">Password:</label> <br>
-                            <input type="password"> <br>
-                            <input type="checkbox"> <label for="" type="checkbox">Remember me?</label> <br>
-                            <hr>
-                            <input class="btn" type="submit" value="login">
-                        </form>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <footer>
-            <div class="footer">
-                <div class="footernav">
-
-                    <h3>GIỚI THIỆU</h3>
-                    <div class="content">
-                        <div class="text">
-
-                            <p>Trường được thành lập gần 25 năm, đã dành được nhiều thành tích và khen thưởng.
-                                Các thầy cô có tinh thần giảng dạy rất cao...</p>
-                        </div>
-                        <div class="text1">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footernav">
-                    <h3>LIÊN KẾT</h3>
-                    <div class="content">
-                        <ul>
-                            <li><a href="Trangchu.html">Trang chủ</a></li>
-                            <li><a href="Gioithieu.html">Giới thiệu</a></li>
-                            <li><a href="Chuyennganh.html">Giáo dục</a></li>
-                            <li><a href="Tintuc.html">Tin tức</a></li>
-                            <li><a href="Lienhe.html">Liên hệ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footernav">
-                    <h3>BÀI VIẾT MỚI</h3>
-
-                    <div class="content">
-
-                        <ul>
-                            <li class="news">
-                                <div><a href="#"><img src="image/tin tuc.jpg" alt=""></div>Buổi tự thiện giúp các em
-                                có
-                                hoàn cảnh khó khăn </a>
-                            </li>
-                            <li class="news">
-                                <div><a href="#"><img src="image/tin tuc3.jpg" alt=""></div>Thông tin về kì thi tốt
-                                nghiệp năm học 2023</a>
-                            </li>
-                            <li class="news">
-                                <div><a href="#"><img src="image/tin tuc2.png" alt=""></div>Kế hoạch tuần 24 năm học
-                                2023</a>
-                            </li>
-
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="footernav">
-                    <h3>THÔNG TIN LIÊN HỆ</h3>
-                    <div class="content">
-                        <ul>
-                            <li><i class="fa-solid fa-location-dot"></i> Mộc Bài 7, Hòa Minh, Liên Chiểu, Đà Nẵng
-                            </li>
-                            <li><i class="fa-solid fa-phone"></i> 0888372325</li>
-                            <li><i class="fa-regular fa-envelope"></i> linhli2k4@gmail.com</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="banquyen">
-                Nguyen Chi Linh &copy; 2023. All right servered.
-            </div>
-        </footer>
     </div>
 </body>
 
