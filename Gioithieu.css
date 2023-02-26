@@ -530,17 +530,16 @@ marquee {
 
 .labelslider label {
     border: 2px solid rgb(23, 27, 37);
-    height: 13px;
-    width: 13px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
-    margin: 4px;
+    margin: 7px;
 
 }
 
 .labelslider label:hover {
     background-color: rgb(32, 58, 70);
 }
-
 
 
 /* phần slider.................... */
