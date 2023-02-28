@@ -543,7 +543,7 @@ marquee {
 
 
 /* phần slider.................... */
-/* dấu ~ là chọn tất cả các thẻ đứng sau thẻ có id là #two */
+/* dấu ~ là chọn tất cả các thẻ có id là #two nhung đứng sau #box1 và phải cùng cấp với box1*/
 #box1:checked~#two,
 #three {
     transition: 0.5s;

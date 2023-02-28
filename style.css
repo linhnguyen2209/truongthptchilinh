@@ -369,7 +369,7 @@ body .container {
     border-radius: 10px;
 }
 
-.box-search .search-inner input:focus{
+.box-search .search-inner input:focus {
     border: solid white;
     box-shadow: 0 0 9px rgb(226, 216, 196);
 }
@@ -385,7 +385,8 @@ body .container {
     border: none;
     transition: 0.3s;
 }
-.box-search .search-inner button:hover{
+
+.box-search .search-inner button:hover {
     background-color: rgb(195, 62, 13);
 }
 
